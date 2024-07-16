@@ -1,0 +1,12 @@
+.navbar {
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 18px;
+    border-bottom: 1px solid black;
+}
+
+.navbar h1 {
+    padding-left: 20px;
+}
