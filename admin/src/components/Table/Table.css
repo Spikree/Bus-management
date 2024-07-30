@@ -1,0 +1,19 @@
+.head-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.table {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+span {
+    font-size: 25px;
+}
+
+hr {
+    color: black;
+}

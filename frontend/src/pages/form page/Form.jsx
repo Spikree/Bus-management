@@ -20,9 +20,17 @@ const Form = () => {
   };
 
   const handleSubmit = async (event) => {
+    setFormData({
+      name: "",
+      department: "",
+      class: "",
+      city: "Miraj",
+      price: 0,
+      year: "fy",
+    })
     event.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/user', formData);
+      const response = await axios.post('http://localhost:4000/user', formData);
       toast.success("user data submitted sucessfully")
     } catch (error) {
       toast.error("failed submitting user data")

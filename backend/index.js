@@ -15,7 +15,7 @@ const url = process.env.MONGO_CONNECT
 
 const app = express();
 app.use(express.json())
-app.use(cors('*'))
+app.use(cors('*'));
 const port = process.env.PORT || 3000;
 
 mongoose.connect(url, { useNewUrlParser: true }).then(() => { console.log("Connected to mongoDB") }).catch(() => { console.log("Error connectiong to mongoDB") })
