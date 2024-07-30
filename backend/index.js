@@ -6,6 +6,7 @@ import Stripe from 'stripe';
 import addUser from './routes/userRoute.js'
 import cors from 'cors'
 import getUsers from './routes/adminRoute.js';
+import deleteUser from './routes/deleteUser.js';
 
 dotenv.config();
 const stripe = new Stripe(process.env.STRIPE_KEY)
@@ -24,9 +25,10 @@ const cities = new Map([
     [2, {priceInCents: 99999, name: "Sangli"}],
     [3, {priceInCents: 20000, name: "Kolhapur"}],
 ]);
-
+    
 app.use('/user',addUser);
 app.use('/getUsers', getUsers);
+app.use('/deleteUser',deleteUser);
 
 app.listen(port, () => {
     console.log(`port running on http://localhost:${port}`);
